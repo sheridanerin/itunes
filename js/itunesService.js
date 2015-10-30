@@ -23,6 +23,7 @@ app.service('itunesService', ['$http', '$q', 'itunesCleanUpService', function($h
   	}).then(function(response) {
 
   		var songs = response.data.results;
+  		console.log(response.data);
 
 
   		var newSongData;
@@ -31,7 +32,6 @@ app.service('itunesService', ['$http', '$q', 'itunesCleanUpService', function($h
   			newSongData = songData;
   			deferred.resolve(newSongData);
   		});
-
   		
   	});
 

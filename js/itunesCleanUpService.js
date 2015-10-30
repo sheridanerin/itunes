@@ -19,6 +19,7 @@ app.service('itunesCleanUpService', ['$http', '$q', function($http, $q){
          	songObj.CollectionPrice = song.collectionPrice;
          	songObj.Play = song.previewUrl;
          	songObj.Type = song.kind;
+          songObj.Explicitness = song.trackExplicitness;
 
     		newSongData.push(songObj);
 
